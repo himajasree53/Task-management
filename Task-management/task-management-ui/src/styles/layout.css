@@ -1,0 +1,68 @@
+.app-layout{
+    display:flex;
+    min-height:100vh;
+    background:#f4f6f9;
+}
+
+.sidebar-open{
+    width:260px;
+    transition:.3s;
+}
+
+.sidebar-close{
+    width:0;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.main-content{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    transition:.3s;
+}
+
+.page-content{
+    padding:25px;
+    margin-top:70px;
+}
+
+.topbar{
+    position:fixed;
+    top:0;
+    right:0;
+    left:260px;
+    height:70px;
+    z-index:1000;
+}
+
+.content-full .topbar{
+    left:0;
+}
+
+.sidebar-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.5);
+    z-index:999;
+}
+
+@media(max-width:991px){
+
+    .sidebar-open{
+        position:fixed;
+        left:0;
+        top:0;
+        z-index:1001;
+        height:100%;
+    }
+
+    .topbar{
+        left:0;
+    }
+
+    .page-content{
+        padding:15px;
+    }
+
+}

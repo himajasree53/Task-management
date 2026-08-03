@@ -1,0 +1,183 @@
+/* ===============================
+   Professional Dashboard Theme
+=============================== */
+
+:root {
+  --primary: #4690e5;
+  --secondary: #14b8a6;
+  --background: #f4f7fc;
+  --card: #ffffff;
+  --text: #1f2937;
+  --border: #e5e7eb;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+          135deg,
+          #eef2ff 0%,
+          #f8fafc 45%,
+          #ecfeff 100%
+  );
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ===============================
+   Layout
+=============================== */
+
+.container,
+.container-fluid {
+  background: transparent;
+}
+
+/* ===============================
+   Cards
+=============================== */
+
+.card,
+.modal-content {
+  background: var(--card);
+  border: none;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* ===============================
+   Tables
+=============================== */
+
+.table {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.table thead {
+  background: #1f2937;
+  color: white;
+}
+
+.table tbody tr:hover {
+  background: #f1f5f9;
+  transition: 0.3s;
+}
+
+/* ===============================
+   Forms
+=============================== */
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, .2);
+}
+
+/* ===============================
+   Buttons
+=============================== */
+
+.btn {
+  border-radius: 10px;
+  transition: .3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   Headings
+=============================== */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #1f2937;
+  font-weight: 700;
+}
+
+/* ===============================
+   Dashboard Cards
+=============================== */
+
+.dashboard-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transition: .3s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,.12);
+}
+
+/* ===============================
+   Calendar
+=============================== */
+
+.rbc-calendar {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: var(--shadow);
+}
+
+.rbc-today {
+  background: #eef2ff !important;
+}
+
+.rbc-today .rbc-button-link {
+  background: var(--primary);
+  color: white !important;
+  border-radius: 50%;
+  padding: 3px 8px;
+  font-weight: bold;
+}
+
+/* ===============================
+   Counter
+=============================== */
+
+.counter {
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   Smooth Animation
+=============================== */
+
+.card,
+.table,
+.btn,
+.form-control,
+.form-select {
+  transition: all .3s ease;
+}
